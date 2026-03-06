@@ -8,7 +8,33 @@
         "typeProperties": {
           "waitTimeInSeconds": 1
         }
+      },
+      {
+        "name": "Set variable1",
+        "type": "SetVariable",
+        "dependsOn": [
+          {
+            "activity": "Wait1",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "policy": {
+          "secureOutput": false,
+          "secureInput": false
+        },
+        "typeProperties": {
+          "variableName": "varEmpId",
+          "value": "Venkateswarlu"
+        }
       }
-    ]
+    ],
+    "variables": {
+      "varEmpId": {
+        "type": "String",
+        "defaultValue": "Ramesh"
+      }
+    }
   }
 }
