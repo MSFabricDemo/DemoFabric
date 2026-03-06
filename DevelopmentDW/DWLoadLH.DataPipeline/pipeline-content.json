@@ -59,16 +59,16 @@
               },
               "schema": [],
               "connectionSettings": {
-                "name": "SalesDW",
+                "name": "9c5c3ec6_5918_493a_b2d5_51acdb80cffd",
                 "properties": {
                   "type": "DataWarehouse",
                   "typeProperties": {
-                    "artifactId": "cbe70119-3ce7-4c93-9750-b18218d8f709",
-                    "endpoint": "wwnrfbwvnjuefjh73xtls3crhm-wvmw4v3c2oxexe4e4mm7gubkd4.datawarehouse.fabric.microsoft.com",
-                    "workspaceId": "576e59b5-d362-4bae-9384-e319f3502a1f"
+                    "artifactId": "@pipeline().libraryVariables.DataStore_WarehouseId",
+                    "endpoint": "@pipeline().libraryVariables.DataStore_SQLConnectionString",
+                    "workspaceId": "@pipeline().libraryVariables.DataStore_WorkspaceId"
                   },
                   "externalReferences": {
-                    "connection": "c47bf488-3fd7-4361-be31-ad17fbeaed33"
+                    "connection": "@pipeline().libraryVariables.DataStore_ConnectionId"
                   },
                   "annotations": []
                 }
@@ -96,6 +96,28 @@
         "name": "TestLoadMain",
         "dependsOn": []
       }
-    ]
+    ],
+    "libraryVariables": {
+      "DataStore_ConnectionId": {
+        "type": "String",
+        "variableName": "ConnectionId",
+        "libraryName": "DataStore"
+      },
+      "DataStore_WorkspaceId": {
+        "type": "String",
+        "variableName": "WorkspaceId",
+        "libraryName": "DataStore"
+      },
+      "DataStore_WarehouseId": {
+        "type": "String",
+        "variableName": "WarehouseId",
+        "libraryName": "DataStore"
+      },
+      "DataStore_SQLConnectionString": {
+        "type": "String",
+        "variableName": "SQLConnectionString",
+        "libraryName": "DataStore"
+      }
+    }
   }
 }
