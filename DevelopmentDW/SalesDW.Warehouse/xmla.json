@@ -495,6 +495,114 @@
         ]
       },
       {
+        "name": "EmployeeDataLoad",
+        "sourceLineageTag": "[dbo].[EmployeeDataLoad]",
+        "columns": [
+          {
+            "name": "EmpId",
+            "dataType": "string",
+            "sourceColumn": "EmpId",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EmpId",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "EmpName",
+            "dataType": "string",
+            "sourceColumn": "EmpName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "EmpName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Salary",
+            "dataType": "string",
+            "sourceColumn": "Salary",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Salary",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "DeptName",
+            "dataType": "string",
+            "sourceColumn": "DeptName",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "DeptName",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Location",
+            "dataType": "string",
+            "sourceColumn": "Location",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Location",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Country",
+            "dataType": "string",
+            "sourceColumn": "Country",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Country",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "EmployeeDataLoad",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "False"
+          }
+        ]
+      },
+      {
         "name": "Geography",
         "sourceLineageTag": "[dbo].[Geography]",
         "columns": [
