@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/valueSet/1.0.0/schema.json",
+  "name": "Test",
+  "variableOverrides": [
+    {
+      "name": "WorkspaceId",
+      "value": "5524e9b4-1496-4ded-addd-52e088414d48"
+    },
+    {
+      "name": "WarehouseId",
+      "value": "faa43d67-c6e7-4fc1-8210-645ac100a78a"
+    },
+    {
+      "name": "SQLConnectionString",
+      "value": "wwnrfbwvnjuefjh73xtls3crhm-wtusivmwctwu3lo5klqiqqknja.datawarehouse.fabric.microsoft.com"
+    }
+  ]
+}
